@@ -1,0 +1,21 @@
+@use "./tokens/colors";
+@use "./tokens/spacing";
+@use "./tokens/radius";
+@use "./layout/app-shell";
+
+/* base reset */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
