@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "@/styles/main.scss";
+
 
 import { Header } from "@/components/layout/Header";
 import { Sidebar } from "@/components/layout/Sidebar";
@@ -29,12 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
-        <div style={{ display: "flex", minHeight: "100vh" }}>
+        <div className="app-shell">
+          <Header />
           <Sidebar />
-          <main style={{ flex: 1, padding: "16px" }}>
-            {children}
-          </main>
+          <main className="app-main">{children}</main>
         </div>
       </body>
     </html>

@@ -1,7 +1,7 @@
 export function Header() {
   return (
-    <header>
-      <h1>FinOps Dashboard</h1>
+    <header className="app-header">
+      <div className="app-header__title">FinOps Dashboard</div>
     </header>
   );
 }
